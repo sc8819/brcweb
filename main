@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blacktooth Running Co.</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Chivo Mono', monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+        header {
+            background-color: #000;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img {
+            height: 50px;
+        }
+        nav {
+            display: none;
+            flex-direction: column;
+            background-color: #000;
+            position: absolute;
+            top: 70px;
+            left: 20px;
+            border: 1px solid #ff5500;
+            border-radius: 8px;
+            padding: 10px;
+            z-index: 10;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+        nav a:hover {
+            color: #ff5500;
+        }
+        .menu {
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+        .menu:hover {
+            color: #ff5500;
+        }
+        .hero {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+            color: #fff;
+        }
+        .hero iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            border: none;
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .hero-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s;
+        }
+        .hero-content p {
+            font-size: 1rem;
+            animation: fadeIn 3s;
+        }
+        .section {
+            padding: 40px 20px;
+        }
+        .section h2 {
+            color: #ff5500;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        footer p {
+            margin: 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #111;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        .card h3 {
+            color: #ff5500;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #ff5500;
+            color: #fff;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #e04d00;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 2s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://via.placeholder.com/150" alt="Placeholder Logo">
+        <div class="menu" onclick="toggleMenu()">&#9776;</div>
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="events.html">Events</a>
+            <a href="documentaries.html">Documentaries</a>
+            <a href="gallery.html">Photo Gallery</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <iframe src="https://www.youtube.com/embed/gNWRgZwy32o?autoplay=1&mute=1&loop=1&playlist=gNWRgZwy32o" allow="autoplay; loop; encrypted-media" allowfullscreen></iframe>
+        <div class="hero-content">
+            <h2>Endurance Trail Running at its Peak</h2>
+            <p>Explore trails, push limits, and discover the community.</p>
+        </div>
+    </section>
+    <section class="section fade-in">
+        <h2>Welcome to Blacktooth Running Co.</h2>
+        <p>Blacktooth Running Co. is dedicated to the spirit of endurance and the beauty of trail running. Based at the foothills of the Bighorn Mountain Range, we aim to inspire runners to achieve their dreams through adventure and community.</p>
+        <p>Join us for trail races, documentaries, and events that highlight the determination and camaraderie of the trail running world.</p>
+    </section>
+    <section class="section">
+        <h2>Event Registration</h2>
+        <div class="grid">
+            <div class="card"><h3>Upcoming Race 1</h3><p>Details about this event.</p></div>
+            <div class="card"><h3>Upcoming Race 2</h3><p>Details about this event.</p></div>
+        </div>
+    </section>
+    <section class="section">
+        <h2>Photo Gallery</h2>
+        <div class="grid">
+            <div class="card"><h3>Trail Adventure 1</h3></div>
+            <div class="card"><h3>Trail Adventure 2</h3></div>
+            <div class="card"><h3>Trail Adventure 3</h3></div>
+            <div class="card"><h3>Trail Adventure 4</h3></div>
+        </div>
+    </section>
+    <section class="section">
+        <h2>Featured Blogs</h2>
+        <div class="grid">
+            <div class="card"><h3>Training Tips for Ultra Runners</h3><p>Learn how to prepare for your next ultra.</p></div>
+            <div class="card"><h3>The Beauty of Trail Running</h3><p>Discover the most scenic trails in the country.</p></div>
+        </div>
+    </section>
+    <section class="section">
+        <h2>Our Sponsors</h2>
+        <div class="grid">
+            <div class="card"><h3>Sponsor 1</h3></div>
+            <div class="card"><h3>Sponsor 2</h3></div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Blacktooth Running Co. All Rights Reserved.</p>
+        <p>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="events.html">Events</a> |
+            <a href="documentaries.html">Documentaries</a> |
+            <a href="gallery.html">Photo Gallery</a> |
+            <a href="blog.html">Blog</a> |
+            <a href="contact.html">Contact</a>
+        </p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+            }
+        }
+    </script>
+</body>
+</html>
